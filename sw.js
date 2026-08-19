@@ -1,11 +1,43 @@
-{
-  "name": "NOVA Marknad",
-  "short_name": "NOVA",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#060b09",
-  "theme_color": "#060b09",
-  "description": "NOVA Marknad – marknadsanalys och realtidssignaler.",
-  "orientation": "portrait-primary"
-}
+const CACHE = "nova-marknad-v2";
+
+const FILES = [
+  "./",
+  "./index.html",
+  "./manifest.webmanifest"
+];
+
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open(CACHE).then(cache => cache.addAll(FILES))
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys
+          .filter(key => key !== CACHE)
+          .map(key => caches.delete(key))
+      )
+    )
+  );
+  self.clients.claim();
+});
+
+self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET") return;
+
+  event.respondWith(
+    fetch(event.request)
+      .then(response => {
+        const copy = response.clone();
+        caches.open(CACHE).then(cache => {
+          cache.put(event.request, copy);
+        });
+        return response;
+      })
+      .catch(() => caches.match(event.request))
+  );
+});
