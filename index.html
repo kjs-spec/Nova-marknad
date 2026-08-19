@@ -58,7 +58,38 @@ body.fs .sidebar{display:none}body.fs .main{margin-left:0;width:100%;max-width:n
 </style><style>
 .jsonTools{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--line);margin-top:14px;padding-top:14px}.jsonTools strong{display:block;font-size:10px}.jsonTools span{display:block;color:#58675f;font-size:8px;margin-top:4px}.jsonBtns{display:flex;gap:6px;flex-shrink:0}
 @media(max-width:700px){.jsonTools{display:block}.jsonBtns{margin-top:10px}}
-</style><meta name="theme-color" content="#060b09"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="NOVA Marknad"><link rel="manifest" href="manifest.webmanifest"><style>.installBtn{height:30px;background:#163523;border:1px solid #326448;color:#83f3b1;border-radius:6px;padding:0 10px;font-size:8px;font-weight:900;cursor:pointer}@media(max-width:700px){.main{margin:0;width:100%;padding:0 10px 70px}.topbar{height:52px}.headline{padding:8px 0}.headline h1{font-size:20px}.headline p{display:none}.stats{grid-template-columns:repeat(2,1fr);gap:6px}.allStocksGrid{display:block}.stockCell{height:34px;margin-bottom:3px}.bottomGrid{grid-template-columns:1fr}.alertPanel{display:none}.manualOverlay{padding:0}.manual{min-height:100dvh;border-radius:0}}</style></head>
+</style><meta name="theme-color" content="#060b09"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="NOVA Marknad"><link rel="manifest" href="manifest.webmanifest"><style>.installBtn{height:30px;background:#163523;border:1px solid #326448;color:#83f3b1;border-radius:6px;padding:0 10px;font-size:8px;font-weight:900;cursor:pointer}@media(max-width:700px){.main{margin:0;width:100%;padding:0 10px 70px}.topbar{height:52px}.headline{padding:8px 0}.headline h1{font-size:20px}.headline p{display:none}.stats{grid-template-columns:repeat(2,1fr);gap:6px}.allStocksGrid{display:block}.stockCell{height:34px;margin-bottom:3px}.bottomGrid{grid-template-columns:1fr}.alertPanel{display:none}.manualOverlay{padding:0}.manual{min-height:100dvh;border-radius:0}}</style>
+<style id="nova-mobile-final">
+.mobileNav{display:none}
+@media (max-width:700px){
+  html,body{width:100%;min-width:0;overflow-x:hidden}
+  body{background:#050907;padding-bottom:64px}
+  .app{display:block;min-height:100dvh}
+  .sidebar{display:none!important}
+  .main{margin:0!important;width:100%!important;max-width:none!important;padding:0 10px 14px!important}
+  .topbar{height:52px!important;padding:0 2px!important;position:sticky;top:0;z-index:30;background:rgba(5,9,7,.96);backdrop-filter:blur(14px)}
+  .crumb{font-size:7px;letter-spacing:1px}.date{font-size:9px}
+  .topActions{gap:4px}.marketState{padding:6px!important}.marketState strong{display:none}
+  .iconBtn,.fullBtn,.installBtn{height:30px!important}.fullBtn{width:30px!important;padding:0!important;font-size:0!important}.fullBtn::first-letter{font-size:16px!important}
+  .headline{padding:10px 0 8px!important;display:flex!important;align-items:center!important;gap:8px!important}
+  .headline>div:first-child{display:block!important;min-width:0}.headline h1{font-size:19px!important;line-height:1.05;margin:0!important;white-space:nowrap}.headline p{display:none!important}
+  .quick{margin-left:auto!important;flex-shrink:0}.quick div{padding:6px 8px!important;min-width:62px!important}.quick div:first-child{display:none}.quick small,.quick span{font-size:6px!important}.quick strong{font-size:13px!important}
+  .statusbar{margin-bottom:6px!important;padding:7px 9px!important}.statusRight{display:none!important}
+  .stats{grid-template-columns:repeat(4,1fr)!important;gap:4px!important;margin-bottom:7px!important}.stat{padding:8px 5px!important;border-radius:8px!important;text-align:center}.stat small{font-size:6px!important;white-space:nowrap}.stat strong{font-size:16px!important;margin:3px 0 0!important}.stat span{font-size:6px!important}
+  .allStocks{padding:9px!important;margin-top:0!important;border-radius:10px!important}
+  .allStocks .panelHead{margin-bottom:6px!important}.allStocks .panelHead h2{font-size:13px!important}.allMeta{font-size:7px!important}.liveMini{display:none}
+  .allStocksGrid{display:block!important;height:auto!important;max-height:none!important}
+  .stockCell{height:36px!important;margin-bottom:3px!important;grid-template-columns:46px 1fr 60px 48px 76px!important;padding:0 7px!important;border-radius:5px!important;font-size:9px!important}
+  .stockSym{font-size:10px!important}.stockState{font-size:6px!important;display:block!important;max-width:70px;overflow:hidden;text-overflow:ellipsis}.stockScore{font-size:9px!important}
+  .bottomGrid{grid-template-columns:1fr!important;gap:6px!important;margin-top:7px!important}.alertPanel{display:none!important}.movers{padding:9px!important}
+  .signalEngine,.radar,footer{display:none!important}
+  .mobileNav{position:fixed;display:grid;grid-template-columns:repeat(4,1fr);left:0;right:0;bottom:0;height:62px;background:rgba(7,14,11,.98);border-top:1px solid #1c2b23;z-index:100;backdrop-filter:blur(16px);padding-bottom:env(safe-area-inset-bottom)}
+  .mobileNav button{border:0;background:transparent;color:#718078;font:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}.mobileNav button b{font-size:16px;font-weight:800}.mobileNav button span{font-size:7px;letter-spacing:.3px}.mobileNav button:first-child{color:var(--green)}
+  .manualOverlay,.adminOverlay{z-index:200}
+  .manual{max-width:none!important;width:100%!important;min-height:100dvh!important;border-radius:0!important}
+}
+</style>
+</head>
 <body>
 <div class="startup" id="startup">
   <div class="startupGlow"></div>
@@ -438,4 +469,11 @@ function importNovaJSON(ev){
  };
  reader.readAsText(file);
 }
-</script><script>let novaInstallPrompt=null;window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();novaInstallPrompt=e;const b=document.getElementById("installBtn");if(b)b.style.display="inline-block"});async function installNOVA(){if(!novaInstallPrompt)return;novaInstallPrompt.prompt();await novaInstallPrompt.userChoice;novaInstallPrompt=null;const b=document.getElementById("installBtn");if(b)b.style.display="none"}if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));</script></body></html>
+</script><script>let novaInstallPrompt=null;window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();novaInstallPrompt=e;const b=document.getElementById("installBtn");if(b)b.style.display="inline-block"});async function installNOVA(){if(!novaInstallPrompt)return;novaInstallPrompt.prompt();await novaInstallPrompt.userChoice;novaInstallPrompt=null;const b=document.getElementById("installBtn");if(b)b.style.display="none"}if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));</script>
+<nav class="mobileNav" id="mobileNav">
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})"><b>⌂</b><span>Översikt</span></button>
+  <button onclick="document.getElementById('allStocksGrid')?.scrollIntoView({behavior:'smooth',block:'start'})"><b>⚡</b><span>Signaler</span></button>
+  <button onclick="document.getElementById('allStocksGrid')?.scrollIntoView({behavior:'smooth',block:'start'})"><b>★</b><span>Bevakning</span></button>
+  <button onclick="toggleAdmin()"><b>⚙</b><span>Inställningar</span></button>
+</nav>
+</body></html>
