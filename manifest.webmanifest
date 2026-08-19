@@ -1,0 +1,10 @@
+{
+  "name":"NOVA Marknad",
+  "short_name":"NOVA",
+  "start_url":"./nova-ai-pwa.html",
+  "display":"standalone",
+  "background_color":"#060b09",
+  "theme_color":"#060b09",
+  "description":"NOVA Marknad – marknadsanalys och realtidssignaler.",
+  "orientation":"portrait-primary"
+}
