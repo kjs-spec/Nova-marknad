@@ -1,8 +1,8 @@
 {
   "name": "NOVA Marknad",
   "short_name": "NOVA",
-  "start_url": "./index.html",
-  "scope": "./",
+"start_url": "https://kjs-spec.github.io/Nova-marknad/",
+  "scope": "https://kjs-spec.github.io/Nova-marknad/",
   "display": "standalone",
   "background_color": "#060b09",
   "theme_color": "#060b09",
